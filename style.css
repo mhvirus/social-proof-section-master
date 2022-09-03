@@ -1,0 +1,218 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --clr-dark-magenta: hsl(300, 43%, 22%);
+    --clr-soft-pink: hsl(333, 80%, 67%);
+
+    --clr-Grayish-Magenta-100: hsl(303, 10%, 53%);
+    --clr-Grayish-Magenta-200: hsl(300, 24%, 96%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 0.9375rem;
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--clr-White);
+    padding-inline: 1.5em;
+    background-image: url('images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+}
+
+main {
+    margin-bottom: 6em;
+}
+/* upper section */
+.content-section {
+    padding-block: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading {
+    color: var(--clr-dark-magenta);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 0.8;
+    margin-block: 0.5em;
+}
+
+.para {
+    color: var(--clr-Grayish-Magenta-100);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2em;
+}
+
+/* *rating card start */
+.content-section {
+    margin-bottom: 0;
+}
+
+.rating__card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.rating__card {
+    background-color: var(--clr-Grayish-Magenta-200);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em 4em;
+    border-radius: 0.5rem;
+}
+
+.star {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6em;
+}
+
+.rating__card-text {
+    color: #601654;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+
+/* *reviews cards */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.card {
+    background-color: var(--clr-dark-magenta);
+    color: var(--clr-Grayish-Magenta-200);
+    padding: 2em;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7em;
+    min-width: 20em;
+    max-width: 25em;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    width: 2.5rem;
+    border-radius: 100vw;
+}
+
+.name {
+    color: var(--clr-White);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.status {
+    color: var(--clr-soft-pink);
+    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--clr-Grayish-Magenta-200);
+    opacity: 0.9;
+    line-height: 1.4;
+    
+}
+
+@media (min-width:40em) {
+    main {
+        margin:  10em;
+    }
+    .content-section {
+        padding-block: 3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: unset;
+        gap: 3em;
+    }
+    
+    .heading {
+        font-size: 3.2rem;
+        max-width: 14ch;
+        font-weight: 700;
+    }
+    
+    .para {
+        line-height: 1.5;
+        max-width: 44ch;
+    }
+    
+    /* *rating card start */
+    
+    .rating__card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .rating__card {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+}
+
+@media (min-width: 53em) {
+    /* *reviews cards */
+
+    .card-container {
+        flex-direction: row;
+        gap: 2em;
+    }
+}
+
+/* util classes */
+.ml-100 {
+    margin-left: 2em;
+}
+
+.ml-200 {
+    margin-left: 4em;
+}
+
+.mt-100 {
+    margin-top: 2em;
+}
+
+.mt-200 {
+    margin-top: 4em;
+}
